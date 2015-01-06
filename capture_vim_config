@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Run this script to automatically capture all the vim configuration
+# from $HOME and set up the bundles as git submodules.
+
+# Copy the VIMRC
+cp $HOME/.vimrc .
+
+# Set up the .vim directory (with associated bundle directory)
+mkdir -p .vim/bundle
+
+# Copy all the stuff that's copyable
+cp -r $HOME/.vim/after .vim
+cp -r $HOME/.vim/autoload .vim
+cp -r $HOME/.vim/doc .vim
+cp -r $HOME/.vim/plugin .vim
+
+# Now set up all the submodules under bundle
+for bundle in $(ls $HOME/.vim/bundle) 
+do 
+	# Get the git URL for the bundle
+	bundle_url=$(cd $HOME/.vim/bundle/$bundle; git config remote.origin.url)
+	echo $bundle_url
+	git submodule add $(bundle_url) .vim/bundle
+done

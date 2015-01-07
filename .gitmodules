@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/vim-unimpaired"]
 	path = .vim/bundle/vim-unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
+[submodule ".vim/bundle/vim-ruby-fold"]
+	path = .vim/bundle/vim-ruby-fold
+	url = git://github.com/bruno-/vim-ruby-fold.git

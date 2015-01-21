@@ -8,6 +8,7 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 " Set up the mapping where ';;' is the same as <esc>
 " map! ;; <esc>
 inoremap jk <esc>
+inoremap ,/ </<C-X><C-O>
 
 " Set up CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim

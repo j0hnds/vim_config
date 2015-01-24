@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/vim-ruby-fold"]
 	path = .vim/bundle/vim-ruby-fold
 	url = git://github.com/bruno-/vim-ruby-fold.git
+[submodule ".vim/bundle/rust.vim"]
+	path = .vim/bundle/rust.vim
+	url = https://github.com/wting/rust.vim.git

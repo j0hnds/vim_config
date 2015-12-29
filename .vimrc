@@ -4,6 +4,7 @@ filetype plugin indent on
 
 au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
 autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 " Set up the mapping where ';;' is the same as <esc>
 " map! ;; <esc>

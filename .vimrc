@@ -2,6 +2,8 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+let g:syntastic_javascript_checkers = ['standard']
+
 au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
